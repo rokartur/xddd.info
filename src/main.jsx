@@ -34,7 +34,7 @@ export const App = () => {
 				duration: .4,
 				ease: 'back',
 				stagger: .2,
-				scrollTrigger: { trigger: '#definitions', start: 'top 50%', end: '95% 50%', scrub: 1 },
+				scrollTrigger: { trigger: '#definitions', start: 'top 85%', end: '95% 50%', scrub: 1 },
 			})
 
 		gsap.fromTo(
@@ -154,7 +154,7 @@ uczucie 10/10 \n
 				<span className={styles.mouseScrollDown} onClick={() => {
 					const definitions = document.querySelector('#definitions')
 					definitions.scrollIntoView({ behavior: 'smooth', block: 'start' })
-				}}><span/></span>
+				}}><span /></span>
 			</section>
 
 			<section id={'definitions'} className={styles.definitionsContainer}>
@@ -189,4 +189,4 @@ uczucie 10/10 \n
 	)
 }
 
-render(<App/>, document.body)
+render(<App />, document.body)
