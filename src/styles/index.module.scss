@@ -1,0 +1,224 @@
+.overlay {
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 112px;
+}
+
+.mainContainer {
+  height: 100dvh;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .heading {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-family: 'WorkSans-Black', sans-serif;
+      font-size: 112px;
+      font-weight: 900;
+      color: #FFFFFF;
+    }
+
+    p {
+      font-family: 'WorkSans-SemiBold', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #EF4444;
+    }
+  }
+}
+
+.definitionsContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 112px;
+
+  scroll-margin: 148px;
+
+  h2 {
+    color: #FFFFFF;
+    font-family: 'WorkSans-Black', sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .definitionsList {
+    max-width: 1632px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    .definition {
+      padding: 0 20px;
+
+      width: 100%;
+      max-width: 533px;
+      height: 256px;
+      max-height: 256px;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+
+      border-radius: 24px;
+      border: 1px solid #262626;
+
+      @media screen and (max-width: 560px) {
+        max-width: 100%;
+      }
+
+      p:nth-child(1) {
+        width: 100%;
+
+        color: #FFFFFF;
+        font-family: 'WorkSans-Bold', sans-serif;
+        font-size: 36px;
+        font-weight: 700;
+        text-align: center;
+
+        transition: font-size .2s;
+
+        @media screen and (max-width: 560px) {
+          font-size: 22px;
+        }
+      }
+
+      p:nth-child(2) {
+        max-width: 448px;
+
+        color: #A3A3A3;
+        font-family: 'WorkSans-Regular', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+
+        @media screen and (max-width: 560px) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.faqContainer {
+  padding: 128px 0 0 0;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 112px;
+
+  .question {
+    max-width: 1200px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    p:nth-child(1) {
+      color: #FFFFFF;
+      font-family: 'WorkSans-Black', sans-serif;
+      font-size: 36px;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    p:nth-child(2) {
+      color: #A3A3A3;
+      font-family: 'WorkSans-Regular', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      text-align: center;
+      white-space: pre-wrap;
+    }
+  }
+}
+
+footer {
+  padding: 64px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  a {
+    color: #A3A3A3;
+    font-family: 'WorkSans-Regular', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+.mouseScrollDown {
+  transform: translateY(320px);
+
+  font-size: 0.9em;
+  border: 2px solid rgba(255, 255, 255, 1);
+  display: block;
+  width: 1.7em;
+  height: 2.8em;
+  border-radius: 0.9em;
+  margin: 0 auto;
+  text-decoration: none;
+  transition: border 0.2s ease-out;
+  cursor: pointer;
+
+  span {
+    display: block;
+    background: #FFFFFF;
+    width: 0.2em;
+    height: 0.3em;
+    margin: 0.7em auto 0;
+    border-radius: 0.4em;
+
+    animation: scroll 1.5s cubic-bezier(0.65, -0.55, 0.25, 1.5) infinite;
+    will-change: transform;
+  }
+
+  &:is(:hover) {
+    border: 2px solid rgba(255, 255, 255, 0.7);
+
+    span {
+      -webkit-animation-duration: 0.7s;
+      animation-duration: 0.7s;
+    }
+  }
+}
+
+@keyframes scroll {
+  0%, 20% {
+    transform: translateY(0) scaleY(1);
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(1.2em) scaleY(1.5);
+    opacity: 0.01;
+  }
+}

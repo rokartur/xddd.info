@@ -1,0 +1,21 @@
+{
+  "name": "xddd.info",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode production --assetsDir . --outDir dist --base /",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "gsap": "^3.12.2",
+    "preact": "^10.19.2",
+    "sass": "^1.69.5"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.7.0",
+    "prettier": "^3.1.0",
+    "vite": "^5.0.2"
+  }
+}
