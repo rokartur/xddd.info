@@ -21,6 +21,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    gap: 12px;
 
     h1 {
       font-family: 'WorkSans-Black', sans-serif;
@@ -29,12 +30,25 @@
       color: #FFFFFF;
     }
 
-    p {
+    p:nth-child(2) {
       font-family: 'WorkSans-SemiBold', sans-serif;
       font-size: 18px;
       font-weight: 600;
       text-transform: uppercase;
       color: #EF4444;
+    }
+
+    .supportingText {
+      padding: 4px 6px;
+
+      font-family: 'WorkSans-SemiBold', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #FFFFFF;
+
+      border-radius: 6px;
+      background-color: #EF4444;
     }
   }
 }

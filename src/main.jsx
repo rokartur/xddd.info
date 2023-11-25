@@ -149,6 +149,9 @@ uczucie 10/10 \n
 				<div className={styles.heading}>
 					<h1 id={'main'}>XD</h1>
 					<p id={'main'}>Śmieszniej już nie będzie</p>
+					<p id={'main'} className={styles.supportingText}>
+						Kompleksowy poradnik XD
+					</p>
 				</div>
 
 				<span className={styles.mouseScrollDown} onClick={() => {
